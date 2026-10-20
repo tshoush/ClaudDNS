@@ -9,5 +9,14 @@ description = "Analyze DNS traffic ahead of an InfoBlox ADP rollout"
 requires-python = ">=3.10"
 dependencies = []
 
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+claudedns = "claudedns.cli:main"
+
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
